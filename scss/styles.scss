@@ -1,0 +1,555 @@
+$primary-color: #0864b1;
+$secondary-color: #676767;
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+//Navbar
+.navbar {
+    transition: background-color 0.3s ease;
+
+    &.scrolled {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar-brand {
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    .nav-item {
+        margin-right: 30px; 
+    }
+
+
+    .nav-link {
+        color: white !important; 
+        opacity: 1;             
+        transition: 0.2s ease;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    .navbar-toggler {
+        border: none; 
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    }
+
+    .language-dropdown {
+        margin-left: 10px;
+        position: relative;
+        top: 5px;
+
+        .btn-link {
+            color: #ffffff;
+            font-size: 0.5rem;
+            text-decoration: none;
+            padding: 0;
+        }
+
+        .lang-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    }  
+    
+
+    @media (max-width: 992px) {
+        .navbar-brand {
+            font-size: 1.75rem; 
+        }
+        p {
+            font-size: 1rem;
+        }
+
+        .language-dropdown {
+            display: none !important; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar-brand {
+            font-size: 1.5rem; /* Small screens (phones in landscape) */
+        }
+        p {
+            font-size: 0.9rem;
+        }
+
+    }
+
+    @media (max-width: 576px) {
+        .navbar-brand {
+            font-size: 1.25rem; /* Extra-small screens (phones in portrait) */
+        }
+        p {
+            font-size: 0.85rem;
+        }
+
+    }
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    padding: 100px 0;
+    background: url('../images/hero-banner.png') no-repeat center center/cover;  /* Base layer (banner) */
+    color: black;
+  
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/hero-background.svg') no-repeat center center/cover;  /* Top layer (background) */
+        z-index: 1;
+    }
+  
+    .container {
+        position: relative;
+        z-index: 2; /* Keeps text and content above the background layers */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1,p {
+        width: 55%;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    @media (max-width: 992px) {
+        h1 {
+            font-size: 2.5rem; /* Medium screens (tablets) */
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem; /* Small screens (phones in landscape) */
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 1.75rem; /* Extra-small screens (phones in portrait) */
+        }
+        p {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+.about {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+ 
+    .borderBottom {
+        width: 100px;
+        height: 3px;
+        background: $secondary-color;
+        margin: 5px 0px 20px 0px;
+    }
+
+    p {
+        margin-top: 30px;
+        width: 70%;
+        line-height: 2;
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.8rem; /* Smaller heading size */
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+// Features //////////////////////////////////////////
+.features {
+    position: relative;
+    padding-bottom: 5rem; /* Adjust spacing as needed */
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1
+    }
+
+    h2 {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+ 
+    .borderBottom {
+        width: 100px;
+        height: 3px;
+        background: $secondary-color;
+        margin: 5px 0px 20px 0px;
+    }
+
+    .row {
+        justify-content: center; 
+        gap: 4vw; 
+        margin-top: 30px;
+    }
+
+    .col-md-3 {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .card {
+        margin: 0 auto; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-10px); 
+        transition: ease 0.3s; 
+    }
+
+    .read-more {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        margin-top: 10px; 
+        font-weight:600; 
+        font-size: 1rem; 
+        color: $primary-color; 
+    }
+    
+    .read-more img {
+        width: 16px;
+        height: 16px;
+        margin-left: 2rem; 
+        object-fit: contain;
+    }
+
+    .pagination-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+    
+    .dot {
+        width: 2.5rem; 
+        height: 6px;  
+        margin: 0 8px;
+        background-color: #9fd2ff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        .col-md-3 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        .col-md-3 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .read-more {
+            font-size: 0.875rem;
+        }
+
+        .pagination-dots {
+            display: none;
+        }
+    }
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 220px; /* Adjust to place top edge between cards */
+    left: 0;
+    width: 100%;
+    bottom: 0px; /* Adjust to extend below the dots */
+    background-color: #f5f5f5; /* Set grey color */
+    z-index: 0; /* Ensure it stays behind content */
+}
+
+
+// Testimonials //////////////////////////////////////////
+.testimonials {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+ 
+    .borderBottom {
+        width: 100px;
+        height: 3px;
+        background: $secondary-color;
+        margin: 5px 0px 20px 0px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto;
+        padding: 0 15px;
+    
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 50px 150px;
+            text-align: center;
+
+            .testimonial-name {
+                font-weight: bold;
+                margin-top: 0px;
+                color: $primary-color;
+            }
+
+            .testimonial-message {
+                position: relative; /* Enable positioning for pseudo-elements */
+                padding: 20px; /* Optional: Adjust padding for spacing */
+    
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    right: 15px;
+                    width: 16px; /* Adjust size as needed */
+                    height: 16px; /* Adjust size as needed */
+                    background: url('../images/quote-right-Icon.svg') no-repeat center center;
+                    background-size: contain;
+                    
+                }
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0px;
+                    left: 35px;
+                    width: 16px; /* Adjust size as needed */
+                    height: 16px; /* Adjust size as needed */
+                    background: url('../images/quote-right-Icon.svg') no-repeat center center;
+                    background-size: contain;
+                    transform: rotate(180deg); /* Rotate to create a left-bottom quote */
+                }
+            }
+        }
+    
+        .swiper-button-next, .swiper-button-prev {
+            width: 40px; /* Adjust the size of the buttons */
+            height: 40px; /* Adjust the size of the buttons */
+            background-size: contain; /* Ensure the SVG icon fits within the button */
+            background-repeat: no-repeat;
+            background-position: center;
+            outline: none;
+        }
+        
+        .swiper-button-next {
+            background-image: url('../images/right-w-icon.svg'); /* Right arrow icon */
+        }
+        
+        .swiper-button-prev {
+            background-image: url('../images/left-w-icon.svg'); /* Left arrow icon */
+        }
+        
+        /* Optional: Hide default arrow icons */
+        .swiper-button-next::after, .swiper-button-prev::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .swiper .swiper-slide {
+            padding: 30px;
+        }
+
+        h2 {
+            font-size: 1.8rem; /* Smaller heading size */
+        }
+
+        .swiper .testimonial-message {
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .swiper .swiper-slide {
+            padding: 25px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .swiper .testimonial-message {
+            font-size: 0.85rem;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.contact {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+ 
+    .borderBottom {
+        width: 100px;
+        height: 3px;
+        background: $secondary-color;
+        margin: 5px 0px 40px 0px;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+}
+
+footer {
+    background: #0864b0;
+    color: white; 
+
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .copyrights {
+        font-weight: bold;
+        
+    }
+
+    .address {
+        font-size: 12px;
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 10px; // Adjust space between icons
+        margin-top: 10px;
+        margin-bottom: 40px;
+
+        img {
+            width: 30px;  // Adjust size of the icons
+            height: 30px; // Adjust size of the icons
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1); // Slight zoom effect on hover
+            }
+        }
+    }
+
+    .published {
+        font-size: 14px;
+    }
+}
+
+
