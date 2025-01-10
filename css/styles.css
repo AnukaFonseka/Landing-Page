@@ -11,7 +11,7 @@ html {
   width: 100% !important;
 }
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(8, 100, 177, 0.9);
 }
 .navbar .container {
   width: 100% !important;
@@ -206,7 +206,7 @@ html {
   align-items: center;
 }
 .about h2 {
-  color: #0864b1;
+  color: rgb(8, 100, 177);
   font-weight: bold;
   font-size: 2rem;
 }
@@ -251,7 +251,7 @@ html {
   z-index: 1;
 }
 .features h2 {
-  color: #0864b1;
+  color: rgb(8, 100, 177);
   font-weight: bold;
   font-size: 2rem;
 }
@@ -289,7 +289,7 @@ html {
   margin-top: 10px;
   font-weight: 600;
   font-size: 1rem;
-  color: #0864b1;
+  color: rgb(8, 100, 177);
 }
 .features .read-more img {
   width: 16px;
@@ -363,7 +363,7 @@ html {
   align-items: center;
 }
 .testimonials h2 {
-  color: #0864b1;
+  color: rgb(8, 100, 177);
   font-weight: bold;
   font-size: 2rem;
 }
@@ -391,7 +391,7 @@ html {
 .testimonials .swiper .swiper-slide .testimonial-name {
   font-weight: bold;
   margin-top: 0px;
-  color: #0864b1;
+  color: rgb(8, 100, 177);
 }
 .testimonials .swiper .swiper-slide .testimonial-message {
   position: relative; /* Enable positioning for pseudo-elements */
@@ -471,7 +471,7 @@ html {
   align-items: center;
 }
 .contact h2 {
-  color: #0864b1;
+  color: rgb(8, 100, 177);
   font-weight: bold;
   font-size: 2rem;
 }

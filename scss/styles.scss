@@ -1,4 +1,4 @@
-$primary-color: #0864b1;
+$primary-color: rgb(8, 100, 177);
 $secondary-color: #676767;
 
 body {
@@ -16,7 +16,7 @@ html {
 
 
   &.scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(8, 100, 177, 0.9);
   }
 
   .container {
