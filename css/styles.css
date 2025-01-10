@@ -8,13 +8,19 @@ html {
 
 .navbar {
   transition: background-color 0.3s ease;
+  width: 100% !important;
 }
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.navbar .container {
+  width: 100% !important;
+  padding: 0 !important;
+}
 .navbar .navbar-brand {
   font-size: 1.75rem;
   font-weight: bold;
+  z-index: 1010;
 }
 .navbar .nav-item {
   margin-right: 30px;
@@ -51,30 +57,88 @@ html {
   margin-right: 5px;
 }
 @media (max-width: 992px) {
-  .navbar .navbar-brand {
-    font-size: 1.75rem;
+  .navbar {
+    background-color: #000000;
+    opacity: 0.9;
+    text-align: center;
   }
-  .navbar p {
-    font-size: 1rem;
-  }
-  .navbar .language-dropdown {
-    display: none !important;
-  }
-}
-@media (max-width: 768px) {
   .navbar .navbar-brand {
     font-size: 1.5rem; /* Small screens (phones in landscape) */
   }
   .navbar p {
     font-size: 0.9rem;
   }
+  .navbar .navbar-toggler {
+    z-index: 1010;
+  }
+  .navbar .language-dropdown {
+    display: none !important;
+  }
+  .navbar .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    display: flex;
+  }
+  .navbar .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 25%;
+    width: 90%;
+    font-size: 20px;
+  }
+  .navbar .navbar-collapse.show {
+    transform: translateY(0);
+  }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #000000;
+    opacity: 0.9;
+    text-align: center;
+  }
   .navbar .navbar-brand {
     font-size: 1.25rem; /* Extra-small screens (phones in portrait) */
   }
   .navbar p {
     font-size: 0.85rem;
+  }
+  .navbar .navbar-toggler {
+    z-index: 1010;
+  }
+  .navbar .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    display: flex;
+  }
+  .navbar .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 25%;
+    width: 90%;
+    font-size: 20px;
+  }
+  .navbar .navbar-collapse.show {
+    transform: translateY(0);
   }
 }
 
@@ -103,7 +167,8 @@ html {
   flex-direction: column;
   justify-content: center;
 }
-.hero h1, .hero p {
+.hero h1,
+.hero p {
   width: 55%;
 }
 .hero h1 {
@@ -353,7 +418,8 @@ html {
   background-size: contain;
   transform: rotate(180deg); /* Rotate to create a left-bottom quote */
 }
-.testimonials .swiper .swiper-button-next, .testimonials .swiper .swiper-button-prev {
+.testimonials .swiper .swiper-button-next,
+.testimonials .swiper .swiper-button-prev {
   width: 40px; /* Adjust the size of the buttons */
   height: 40px; /* Adjust the size of the buttons */
   background-size: contain; /* Ensure the SVG icon fits within the button */
@@ -367,7 +433,8 @@ html {
 .testimonials .swiper .swiper-button-prev {
   background-image: url("../images/left-w-icon.svg"); /* Left arrow icon */
 }
-.testimonials .swiper .swiper-button-next::after, .testimonials .swiper .swiper-button-prev::after {
+.testimonials .swiper .swiper-button-next::after,
+.testimonials .swiper .swiper-button-prev::after {
   display: none;
 }
 @media (max-width: 768px) {
@@ -391,7 +458,8 @@ html {
   .testimonials .swiper .testimonial-message {
     font-size: 0.85rem;
   }
-  .testimonials .swiper-button-next, .testimonials .swiper-button-prev {
+  .testimonials .swiper-button-next,
+  .testimonials .swiper-button-prev {
     width: 25px;
     height: 25px;
   }
