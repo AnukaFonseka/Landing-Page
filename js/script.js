@@ -67,6 +67,12 @@ const swiper = new Swiper('.swiper', {
     
     // Optional parameters
     loop: true,
+
+    // Enable autoplay
+    autoplay: {
+        delay: 2000, 
+        disableOnInteraction: false, 
+    },
   
     // pagination
     pagination: {
